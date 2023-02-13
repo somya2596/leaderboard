@@ -7,9 +7,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.ToString;
 
 @Entity
 @Table(name = "top-scores")
+@Data
+@AllArgsConstructor
+@ToString
 public class Score implements Comparable<Score> {
 
 	@Id
@@ -26,36 +32,6 @@ public class Score implements Comparable<Score> {
 
 	public Score() {
 
-	}
-
-	public Score(String playerName, Integer score) {
-		this.playerName = playerName;
-		this.score = score;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public String getPlayerName() {
-		return playerName;
-	}
-
-	public void setPlayerName(String playerName) {
-		this.playerName = playerName;
-	}
-
-	public Integer getScore() {
-		return score;
-	}
-
-	public void setScore(Integer score) {
-		this.score = score;
-	}
-
-	@Override
-	public String toString() {
-		return "Score [id=" + id + ", playerName=" + playerName + ", score=" + score + "]";
 	}
 
 	@Override
