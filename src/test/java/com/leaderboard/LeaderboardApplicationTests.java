@@ -19,11 +19,11 @@ import com.leaderboard.ServiceImplementation.ScoreServiceImplementation;
 @RunWith(MockitoJUnitRunner.class)
 class LeaderboardApplicationTests {
 
-	  // Inject the ScoreRepository instance into the ScoreServiceImplementation instance
+	   //Inject the ScoreRepository instance into the ScoreServiceImplementation instance
 		@InjectMocks
 		private ScoreServiceImplementation consumeScores;
 		
-		// Create a mock instance of ScoreRepository
+		//Create a mock instance of ScoreRepository
 		@Mock
 		private ScoreRepository scoreRepository;
 
